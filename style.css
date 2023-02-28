@@ -1,0 +1,312 @@
+.pre-chargement{
+    position: fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color: rgb(12, 112, 161);
+    z-index: 20;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+
+.pre-chargement .chargement {
+    display : block;
+    width: 100px;
+    height : 100px;
+    position : relative;
+}
+
+.pre-chargement .chargement::before{
+    content : '';
+    width : 100px;
+    height : 100px;
+    position : absolute;
+    border : 5px solid white;
+    border-color : white transparent white transparent;
+    border-radius : 50%;
+    animation: chargement 1s infinite ease-in-out;
+}
+
+@keyframes chargement {
+   0%{
+    transform : rotate(0deg)
+   } 
+
+   100%{
+    transform : rotate(360deg)
+   }
+}
+
+header {
+    text-align: center;
+    font-size: 30vh;
+    background-color: rgb(12, 112, 161);
+    height : 50vh;
+}
+
+.banniere{
+    text-align: center;
+    font-size: 17vh;
+    background-color: rgb(12, 112, 161);
+    height : 25vh;
+    
+}
+body{
+    margin : 0;
+    font-family: 'Poppins';
+    background-color: rgb(147, 203, 207);
+    color : white;
+}
+
+@font-face {
+    font-family :'Poppins';
+    src: url('./fonts/Poppins-ExtraLight.ttf')
+}
+
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('./fonts/Poppins-Bold.ttf');
+}
+.btn {
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 7vh;
+    text-transform: uppercase;
+    background: rgb(12, 112, 161);
+    color: white;
+    border-radius: 3vh;
+    padding: 4vh 5vh;
+    box-shadow: 0 0 10vh -10px rgb(64, 108, 106);
+    transition: all .3s;
+    text-decoration: none;
+    position :absolute;
+    margin-top: 1vh;   
+    width: 100vh;
+    margin-left : -15vh;
+}
+
+.btn_co{
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 7vh;
+    text-transform: uppercase;
+    background: rgb(12, 112, 161);
+    color: white;
+    border-radius: 3vh;
+    padding: 4vh 5vh;
+    box-shadow: 0 0 10vh -10px rgb(64, 108, 106);
+    transition: all .3s;
+    text-decoration: none;
+    position :absolute;
+    margin-top: 15vh;  
+    margin-left: 110vh;  
+}
+
+.btn_i{
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 7vh;
+    text-transform: uppercase;
+    background: rgb(12, 112, 161);
+    color: white;
+    border-radius: 3vh;
+    padding: 4vh 5vh;
+    box-shadow: 0 0 10vh -10px rgb(64, 108, 106);
+    transition: all .3s;
+    text-decoration: none;
+    position :absolute;
+    margin-top: 15vh;  
+    margin-left: 40vh;  
+}
+
+  .btn:hover {
+    box-shadow: 0 8px 65px -5px rgb(64, 108, 106);
+}
+
+.corps{
+    height : 47vh;
+    display : flex;
+    background-color: rgb(147, 203, 207) ;
+    transition : background 0.5s ease;
+    position : relative;
+}
+#pseudoi::placeholder{
+    color : rgb(200, 193, 193);
+}
+#maili::placeholder{
+    color : rgb(200, 193, 193);
+}
+#mdpi::placeholder{
+    color : rgb(200, 193, 193);
+}
+
+.field-name,
+.field-email,
+.field-password,
+.field-submit{
+    position : absolute;
+    top : 42%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    background : rgb(12, 112, 161);
+    height : 15vh;
+    width : 75vh;
+    display : flex;
+    justify-content: space-between;
+    align-items : center;
+    border-radius: 4vh;
+    transition : all 0.5s ease;
+}
+
+.field-name input,
+.field-email input,
+.field-password input{
+    background: none;
+    border :none;
+    flex : 1;
+    height : 100%;
+    outline: none;
+    color : white;
+    font-size: x-large;
+}
+.field-name input:focus,
+.field-email input:focus,
+.field-password input:focus{
+    background-color: rgb(12, 112, 161) ;
+    border-radius: 4vh;
+}
+
+.field-name i,
+.field-email i,
+.field-password i,
+.field-submit i {
+    padding : 5vh;
+    font-size: 8vh;
+    cursor: pointer;
+}
+
+.corpsco{
+    display: flex;
+    margin-left: 80vh;
+    margin-top: 7vh;
+}
+
+.inputmail,
+.inputmdp{
+    background: rgb(12, 112, 161);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: rgb(147, 203, 207);
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    width: 15em;
+}
+
+#mail::placeholder{
+    color : rgb(147, 203, 207);
+}
+#mdp::placeholder{
+    color : rgb(147, 203, 207);
+}
+.inputmail input,
+.inputmdp input{
+    background: none;
+    border :none;
+    flex : 1;
+    height : 100%;
+    outline: none;
+    color : white;
+    font-size: x-large;
+    width: 39.5vh;
+}
+
+
+.envoyerco input{
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 3vh;
+    background: rgb(12, 112, 161);
+    color: rgb(147, 203, 207);
+    border-radius: 2vh;
+    width: 40vh;
+    transition: all .3s;
+    position : absolute;
+    text-decoration: none;
+}
+div.innactive{
+    opacity: 0;
+    pointer-events : none;
+    transform: translate(-50%, -50%);
+}
+div.active{
+    opacity : 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%,-50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.editer,
+.deco{
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 3vh;
+    background: rgb(12, 112, 161);
+    color: rgb(147, 203, 207);
+    border-radius: 3vh;
+    width: 40vh;
+    transition: all .3s;
+}
+.editer a,
+.deco a{
+    font-family: 'Poppins-bold';
+    letter-spacing: 2px;
+    font-size: 3vh;
+    background: rgb(12, 112, 161);
+    color: rgb(147, 203, 207);
+    border-radius: 3vh;
+    width: 40vh;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+#pseudoedit,
+#nomedit,
+#prenomedit,
+#telephonedit,
+#adresseedit,
+#mailedit,
+#mdp1edit,
+#mdp2edit{
+    background: rgb(12, 112, 161);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: rgb(147, 203, 207);
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    width: 15em;
+}
+
+#maj{
+    background: rgb(12, 112, 161);
+    color :rgb(147, 203, 207)
+}
+
